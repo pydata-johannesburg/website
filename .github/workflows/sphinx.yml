@@ -11,7 +11,8 @@ on:
 
 # Define the jobs to run
 jobs:
-  build-docs:
+  # Build job
+  build:
     runs-on: ubuntu-latest  # The latest Ubuntu environment
 
     steps:
@@ -35,16 +36,24 @@ jobs:
       - name: Build documentation
         run: make html  # Build the HTML documentation
 
-      # Upload the built documentation as an artifact (optional)
-      - name: Upload documentation
-        uses: actions/upload-artifact@v3
-        with:
-          name: sphinx-html-docs
-          path: build/html
+  # Deploy job
+  deploy:
+    # Add a dependency to the build-docs job
+    needs: build
 
-      # (Optional) You can also deploy to GitHub Pages with this step:
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/html
+        id: deployment
+        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
