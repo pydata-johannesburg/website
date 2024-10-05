@@ -39,7 +39,7 @@ jobs:
 
       # Upload the built documentation as an artifact
       - name: Upload documentation
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: _build/html  # Adjust if necessary to match the actual build path
