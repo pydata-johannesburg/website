@@ -41,7 +41,7 @@ jobs:
       - name: Upload documentation
         uses: actions/upload-artifact@v3
         with:
-          name: sphinx-html-docs
+          name: github-pages
           path: build/html  # Adjust if necessary to match the actual build path
 
   # Deploy job
