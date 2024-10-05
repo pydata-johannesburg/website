@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: github-pages
-          path: build/html  # Adjust if necessary to match the actual build path
+          path: _build/html  # Adjust if necessary to match the actual build path
 
   # Deploy job
   deploy:
