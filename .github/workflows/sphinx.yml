@@ -1,4 +1,4 @@
-name: Build Sphinx Documentation
+name: Build and Deploy Sphinx Documentation
 
 # Trigger the workflow on pushes or pull requests to the main branch
 on:
@@ -13,7 +13,7 @@ on:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest  # The latest Ubuntu environment
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
 
     steps:
       # Checkout the code
@@ -34,24 +34,27 @@ jobs:
 
       # Build the Sphinx documentation
       - name: Build documentation
-        run: make html  # Build the HTML documentation
+        run: |
+          make html  # Build the HTML documentation
 
       # Upload the built documentation as an artifact
       - name: Upload documentation
         uses: actions/upload-artifact@v3
         with:
           name: sphinx-html-docs
-          path: build/html
+          path: build/html  # Adjust if necessary to match the actual build path
 
   # Deploy job
   deploy:
-    # Add a dependency to the build-docs job
+    # Add a dependency on the build job
     needs: build
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+      pages: write      # To deploy to GitHub Pages
+      id-token: write   # To verify the deployment originates from an appropriate source
+      contents: read    # Required to read the repo content during deployment
+      deployments: write  # Specific permission for Pages deployment
 
     # Deploy to the github-pages environment
     environment:
@@ -63,4 +66,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
+        uses: actions/deploy-pages@v4
