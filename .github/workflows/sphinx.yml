@@ -53,8 +53,6 @@ jobs:
     permissions:
       pages: write      # To deploy to GitHub Pages
       id-token: write   # To verify the deployment originates from an appropriate source
-      contents: read    # Required to read the repo content during deployment
-      deployments: write  # Specific permission for Pages deployment
 
     # Deploy to the github-pages environment
     environment:
@@ -65,5 +63,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
