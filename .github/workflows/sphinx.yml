@@ -36,6 +36,13 @@ jobs:
       - name: Build documentation
         run: make html  # Build the HTML documentation
 
+      # Upload the built documentation as an artifact
+      - name: Upload documentation
+        uses: actions/upload-artifact@v3
+        with:
+          name: sphinx-html-docs
+          path: /build/html
+
   # Deploy job
   deploy:
     # Add a dependency to the build-docs job
