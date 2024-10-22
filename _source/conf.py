@@ -24,6 +24,9 @@ html_sidebars = {
     ]
 }
 
+# Add this configuration to specify your domain name
+html_baseurl = 'https://www.pydata.co.za'
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
