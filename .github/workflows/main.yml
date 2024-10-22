@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:    
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the code from the repository
+    - uses: actions/checkout@v3
+
+    # Build documentation with Sphinx
+    - name: Build Sphinx Documentation
+      uses: ammaraskar/sphinx-action@v1
+      with:
+        docs-folder: "docs/"
+
+    # Create an artifact of the html output
+    - name: Upload Documentation
+      uses: actions/upload-artifact@v3
+      with:
+        name: DocumentationHTML
+        path: docs/_build/html/
