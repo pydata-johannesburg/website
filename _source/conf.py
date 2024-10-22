@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'PyData Johannesburg'
-copyright = '2024, Luis de Sousa'
+copyright = '2024, PyData Johannesburg'
 author = 'Luis de Sousa'
 
 # -- General configuration ---------------------------------------------------
@@ -18,7 +18,11 @@ extensions = []
 templates_path = ['_templates']
 exclude_patterns = []
 
+html_sidebars = {
+    '**': [
 
+    ]
+}
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

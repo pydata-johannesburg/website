@@ -1,7 +1,7 @@
 Home
 ====
 
-PyData Johannesburg is part of the global PyData community, fostering the discussion of best practices in data science, machine learning, and scientific computing. This documentation contains information about the events, tutorials, resources, and more for the PyData Johannesburg community.
+**PyData Johannesburg** is a regional chapter of the global PyData community, which is dedicated to advancing open-source data science, machine learning, and scientific computing. We bring together people from various backgrounds, including academia, industry, and the open-source community, to share knowledge, best practices, and insights on data science tools and techniques.
 
 Contents:
 
@@ -9,38 +9,48 @@ Contents:
    :maxdepth: 2
    :caption: Table of Contents
 
-   about
-   events
-   tutorials
-   resources
+   blog/index
 
-About PyData Johannesburg
---------------------------
+Our Mission
+-----------
 
-PyData Johannesburg is dedicated to bringing together users and developers of open-source tools in data science. We host regular meetups and events where professionals, enthusiasts, and beginners can learn and share their knowledge.
+PyData Johannesburg aims to:
 
-Join us at our next event, participate in a workshop, or check out our resources for improving your data science and machine learning skills.
+- Promote the use of **open-source tools** for data science and machine learning.
+- Foster a welcoming and inclusive **community** where people of all skill levels can collaborate and learn.
+- Encourage the sharing of **real-world use cases** and best practices in data science.
+- Provide a platform for **networking**, mentorship, and collaboration.
 
-**Follow us**: https://pydata.org/johannesburg
+Our Events
+----------
 
-Getting Started
----------------
+PyData Johannesburg organizes regular meetups, workshops, and conferences, where participants can:
 
-If you're new to PyData Johannesburg, here's how you can get involved:
+- Learn about the latest developments in data science, machine learning, and scientific computing.
+- Engage with local and international **speakers and experts** who share their experiences and insights.
+- Participate in **hands-on tutorials** to develop practical skills.
+- Connect with other data science professionals, enthusiasts, and students.
 
-- Attend our **upcoming events** to learn from industry experts and connect with the community.
-- Explore our **tutorials** section to learn more about popular tools and techniques in data science.
-- Access our curated list of **resources** to deepen your knowledge in various topics like Python, machine learning, and data visualization.
+Whether you’re a beginner just starting in data science or a seasoned professional looking to deepen your knowledge, PyData Johannesburg has something for everyone.
 
-Contributing
-------------
+How to Get Involved
+-------------------
 
-PyData Johannesburg thrives on community involvement. If you would like to contribute to our events, give a talk, or help improve this documentation, please reach out to us!
+Here are some ways you can participate in PyData Johannesburg:
 
-Contact
--------
+- **Attend Meetups:** Join our regular meetups to learn and discuss various data science topics.
+- **Contribute to Events:** Share your knowledge by giving a talk, hosting a tutorial, or leading a discussion.
+- **Collaborate:** Work with others in the community on open-source projects and research.
 
-For more information, visit our website or contact us at **info@pydata.org**.
+Stay Connected
+--------------
+
+For more information and updates, follow us on:
+
+- Website: https://www.pydata.co.za
+- Meetup: https://www.meetup.com/PyData-Johannesburg
+
+We look forward to seeing you at our next event!
 
 Indices and tables
 ==================
