@@ -4,7 +4,7 @@ Welcome to the PyData Johannesburg website repository. This project contains the
 
 ## Project Structure
 
-The repository is organized as follows:
+The repository is organised as follows:
 
 - `_build/`: Contains the built HTML files and other generated content.
 - `_source/`: Contains the source files for the Sphinx documentation.
