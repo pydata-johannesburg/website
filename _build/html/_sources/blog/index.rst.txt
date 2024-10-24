@@ -6,4 +6,4 @@ Welcome to the PyData Johannesburg blog. Here you'll find the latest updates, in
 .. toctree::
    :maxdepth: 1
 
-   city-rock
+   CityROCK
